@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "VS/YswGASgc6A6Xy3m54plWbbjnE1xLmvamOFmcR+rw=",
+  "Source": "dotnet_pet_api",
+  "BasePath": "_content/dotnet_pet_api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

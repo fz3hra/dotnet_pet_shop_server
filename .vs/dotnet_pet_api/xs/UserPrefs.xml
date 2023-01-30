@@ -1,0 +1,26 @@
+﻿<Properties StartupConfiguration="{C528FF42-A302-4F54-888A-18C739A8E1C0}|https">
+  <MonoDevelop.Ide.ItemProperties.dotnet__pet__api PreferredExecutionTarget="/Applications/Brave Browser.app" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="dotnet_pet_api/Program.cs">
+    <Files>
+      <File FileName="dotnet_pet_api/Program.cs" Line="92" Column="56" />
+      <File FileName="dotnet_pet_api/Models/Categories.cs" />
+      <File FileName="dotnet_pet_api/appsettings.json" />
+      <File FileName="dotnet_pet_api/Models/Users.cs" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="dotnet_pet_api" expanded="True">
+            <Node name="dotnet_pet_api" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
