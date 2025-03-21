@@ -11,5 +11,6 @@ namespace DbaseContext
         }
         public DbSet<Categories> Categories { get; set; } = null!;
         public DbSet<Users> Users { get; set; } = null!;
+        public DbSet<CreateToDo> CreateToDo { get; set; } = null!;
     }
 }

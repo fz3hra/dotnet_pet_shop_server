@@ -53,6 +53,45 @@ app.MapPost("/createPets", async (PetsDb database, Categories categories) =>
     await database.SaveChangesAsync();
     return Results.Created($"/createPets/{categories.Id}", categories);
 });
+
+/////////////////////////////////////////////
+///
+
+app.MapGet("/getTodos", async (PetsDb database) => await database.CreateToDo.ToListAsync());
+
+
+// START: CREATE TO DO API
+app.MapPost("/createTodos", async (PetsDb database, CreateToDo createToDo) =>
+{
+    await database.CreateToDo.AddAsync(createToDo);
+    await database.SaveChangesAsync();
+    return Results.Created($"/createTodos/{createToDo.Id}", createToDo);
+});
+// END: CREATE TO DO API
+
+app.MapPut("/updateTodo/{id}", async (PetsDb database, CreateToDo updateTodo, int id) =>
+{
+    var category = await database.CreateToDo.FindAsync(id);
+    if (category is null) return Results.NotFound();
+   // category.Title = updateTodo.Title;
+    category.isChecked = updateTodo.isChecked;
+    await database.SaveChangesAsync();
+    return Results.NoContent();
+});
+
+app.MapDelete("/deleteTodo/{id}", async (PetsDb db, int id) =>
+{
+    var toDo = await db.CreateToDo.FindAsync(id);
+    if (toDo is null)
+    {
+        return Results.NotFound();
+    }
+    db.CreateToDo.Remove(toDo);
+    await db.SaveChangesAsync();
+    return Results.Ok();
+});
+/////////////////////////////////////////////
+
 app.MapGet("/getPetId/{id}", async (PetsDb db, int id) => await db.Categories.FindAsync(id));
 
 app.MapPut("/updatePet/{id}", async (PetsDb database, Categories updateCategory, int id) =>
